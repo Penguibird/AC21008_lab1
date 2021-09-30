@@ -26,6 +26,7 @@
  */
 float convertTemperature(float fahrenheit)
 {	
+	return (fahrenheit - 32) * ((float) 5 / 9);
 	// Add code here to convert the temperature
 	// in fahrenheit to celsius and return the
 	// result (or -1 in the event of errors or
@@ -81,4 +82,13 @@ int totalFromTimesTable(int table, int end)
 	// NOTE: do NOT add any user input or output
 	// statements into your code, e.g. such as
 	// printf and scanf. You do not need these.
+	if (end < 0) {
+		return -1;
+	}
+	int total = 0;
+	for (int i = 1; i <= end; ++i)
+    {
+		total += (table * i);
+    }
+	return total;
 }
